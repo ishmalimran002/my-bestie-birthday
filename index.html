@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Komal 🎂</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      color: #fff;
+      background: url('images/bg.jpg.JPG') no-repeat center center fixed;
+      background-size: cover;
+      overflow-x: hidden;
+    }
+
+    nav {
+      position: fixed;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 220px;
+      background: rgba(51, 51, 51, 0.9);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 60px;
+      gap: 20px;
+      z-index: 1000;
+    }
+
+    nav button {
+      background: gold;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 20px;
+      color: #333;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      width: 160px;
+    }
+
+    nav button:hover {
+      background: #fff8dc;
+      color: #000;
+    }
+
+    .container {
+      margin-left: 240px;
+      padding: 40px 20px;
+      background-color: rgba(0, 0, 0, 0.5);
+      margin-top: 20px;
+      margin-right: 20px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5rem;
+      color: gold;
+    }
+
+    .message {
+      font-size: 1.5rem;
+      margin: 20px 0;
+      font-family: 'Great Vibes', cursive;
+      color: #ffd700;
+      line-height: 2;
+    }
+
+    .blink-love {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2rem;
+      color: gold;
+      animation: blink 1s infinite;
+      margin-bottom: 25px;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .gallery, .video, .countdown {
+      margin-top: 30px;
+      display: none;
+    }
+
+    .gallery.active,
+    .video.active,
+    .countdown.active {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 220px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(255, 215, 0, 0.6);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .video video {
+      width: 90%;
+      max-width: 600px;
+      border: 5px solid gold;
+      border-radius: 20px;
+    }
+
+    .countdown span {
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 10px;
+      color: #ffeb3b;
+    }
+
+    /* Animated heart overlay */
+    body::before {
+      content: "💗 💕 💖 💘 💝 💞 💓 💟";
+      position: fixed;
+      top: -50px;
+      font-size: 2rem;
+      width: 100%;
+      text-align: center;
+      animation: float 10s linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(200vh); }
+    }
+  </style>
+</head>
+<body>
+
+<audio autoplay loop>
+  <source src="music/yara.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<nav>
+  <button onclick="showSection('countdown')">🎂 Countdown</button>
+  <button onclick="showSection('video')">📹 Video</button>
+  <button onclick="showSection('gallery')">📸 Gallery</button>
+</nav>
+
+<div class="container">
+  <h1>Happy Birthday Komal! 🎉</h1>
+  <p class="message">
+    On this most special day, I want you to know just how deeply loved you are. 💕<br>
+    Komal, you are the sparkle in my life, the joy in my heart, and the reason behind my smile every single day. 🌟<br>
+    Your kindness, your laughter, your beauty — everything about you makes this world a brighter place. <br>
+    May your birthday be as beautiful, magical, and full of love as you are. 🕊️<br>
+    Never forget how special you are — not just today, but every day. Happy Birthday, my precious Komal! 💐🎁🎈<br>
+    I promise to celebrate you not just today, but forever. 💞
+  </p>
+  <p class="blink-love">I love you Komal 💖</p>
+
+  <!-- Countdown Section -->
+  <div class="countdown" id="countdown">
+    <span id="days">00</span> days
+    <span id="hours">00</span> hours
+    <span id="minutes">00</span> minutes
+    <span id="seconds">00</span> seconds
+  </div>
+
+  <!-- Video Section -->
+  <div class="video" id="video">
+    <video controls>
+      <source src="video/Komal1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video controls>
+      <source src="video/Komal2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Image Gallery -->
+  <div class="gallery" id="gallery">
+    <img src="images/img1.jpg.JPG" alt="Komal Pic 1">
+    <img src="images/img2.jpg.JPG" alt="Komal Pic 2">
+    <img src="images/img3.jpg.JPG" alt="Komal Pic 3">
+    <img src="images/img4.jpg.jpg" alt="Komal Pic 4">
+    <img src="images/img5.jpg.jpg" alt="Komal Pic 5">
+    <img src="images/img6.jpg.jpg" alt="Komal Pic 6">
+  </div>
+</div>
+
+<script>
+  function showSection(sectionId) {
+    const sections = ['gallery', 'video', 'countdown'];
+    sections.forEach(id => {
+      document.getElementById(id).classList.remove('active');
+    });
+    document.getElementById(sectionId).classList.add('active');
+  }
+
+  // Countdown Timer – Komal's birthday on 23 May 2025
+  const birthdayDate = new Date("May 23, 2025 00:00:00").getTime();
+
+  setInterval(() => {
+    const now = new Date().getTime();
+    const distance = birthdayDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds;
+  }, 1000);
+</script>
+
+</body>
+</html>
